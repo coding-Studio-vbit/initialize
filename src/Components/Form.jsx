@@ -283,12 +283,12 @@ const Questions = ({ form, setOpened }) => {
             });
             unstable_batchedUpdates(() => {
               setOpened(false);
-              setVisible(false)
               form.reset();
             });
 
             nav("/registered",{state:form.values.name})
           }
+          setVisible(false)
         }}
         className="bg-purple-600 mt-[1rem] ml-auto w-full  hover:bg-purple-800 shadow-md"
       >
