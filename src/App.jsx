@@ -26,7 +26,7 @@ function App() {
               <div className="min-h-screen relative">
                 <Navbar />
                 <Event />
-                <div className="absolute bottom-0  w-full">
+                <div className="absolute bottom-0 z-[-10]  w-full">
                   <Waves />
                 </div>
               </div>
