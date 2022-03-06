@@ -8,9 +8,9 @@ export default function Event() {
       </div>
       <span className="md:text-[4rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center  font-mono">
      
-          Boot-up your CP journey with cS.<em><span className="text-[#9333ea]" >initialize</span>();</em>
+          Boot-up your CP journey with <em><span className="text-[#9333ea]" >initialize</span>();</em>
         
-        <span className="mt-4 block text-[1.1rem] md:text-right text-center">
+        <span className="mt-4 block text-[1.1rem] md:text-right text-center font-sans">
           Registration closes on 13th March 2022, 11:59 PM
         </span>
       </span>
