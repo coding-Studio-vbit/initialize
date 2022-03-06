@@ -6,7 +6,7 @@ export default function Event() {
       <div className="self-center md:justify-self-start justify-self-center w-[70%] h-full 	">
         <img src={Logo} alt="logo" />
       </div>
-      <span className="md:text-[3rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center">
+      <span className="md:text-[4rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center">
      
           Initialize your CP career with cs.init();
         
