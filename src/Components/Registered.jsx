@@ -3,26 +3,27 @@ import { Navigate, useLocation } from "react-router-dom";
 import logo from './../blackLogo.png'
 export default function Registered() {
   const location = useLocation();
-    if(!location.state){
-       return <Navigate to={"/"}  replace={true}/>
-    }
+    // if(!location.state){
+    //    return <Navigate to={"/"}  replace={true}/>
+    // }
 
   return (
-    <div className="bg-[#f5e8f7] flex flex-col w-screen h-screen items-center">
+    <div className="bg-[#121212] flex flex-col w-screen h-screen items-center">
       <div className="flex gap-8 items-center mt-16" >
         <span className="material-icons text-green-600 text-[3rem]">check_circle</span>
-        <span className="text-[1.5rem]" >Registered Successfully</span>
+        <span className="text-[1.5rem] text-[#e1e1e1]" >Registered Successfully</span>
       </div>
-      <div className="flex bg-white shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#82498c] ">
-            <span className="text-[1.1rem]" >We will contact you shortly {state.name}. Stay tuned.</span>
+      <div className="flex bg-[#1e1e1e] text-[#e1e1e1] shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#82498c] ">
+            <span className="text-[1.1rem]" >We will contact you shortly {}. Stay tuned.</span>
             <span className="text-[1.1rem]" >We hope you will enjoy our sessions and have fun.</span>
+            <span className="text-[1.25rem] mt-4" >Have any Queries ?</span>
+            <span> Reach us on <strong>executives@codingstudio.club</strong></span>
 
-            <span className="text-[1.1rem] mt-4" >Meanwhile follow us on Instagram for updates.</span>
-            <div className="flex mt-2 gap-4 justify-between relative">
-                <img className="w-[52px]" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/240px-Instagram_icon.png" alt="insta" />
-                <img className="w-[70px] left-16 -translate-y-[0.3rem] absolute" src={logo} alt="cs logo" />
-        
-            </div>
+            <span className="text-[1.1rem] mt-4" >Follow us on Instagram for updates.</span>
+            <div className="flex  mt-2 ">
+            <img className="w-[64px] h-[64px] " src="https://img.icons8.com/plasticine/100/000000/instagram-new--v2.png"/>
+                <img className="w-[64px] scale-90 mt-1 " src={logo} alt="cs logo" />
+                <img className="ml-2 scale-90" src="https://img.icons8.com/doodle/64/000000/youtube-play--v2.png"/>                </div>
       </div>
     </div>
   );

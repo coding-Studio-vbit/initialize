@@ -3,11 +3,11 @@ import React from "react";
 
 export default function Navbar() {
   return (
-    <div className="flex flex-col sm:flex-row  w-full items-center gap-4 sm:justify-between px-[4rem] py-4">
-      <span className="text-[1.75rem]">codingStudio(); | Initialize</span>
+    <div className="flex flex-col sm:flex-row bg-[#121212]  w-full items-center gap-4 sm:justify-between px-[6rem] py-4">
+      <span className="text-[1.75rem] text-[#e1e1e1]">codingStudio(); | Initialize</span>
       <div>
         <a target="_blank" href="https://www.codingstudio.club/">
-          <span className=" cursor-pointer mr-8 text-[1.1rem]">About Us</span>
+          <span className="text-[#e1e1e1] cursor-pointer mr-8 text-[1.1rem]">About Us</span>
         </a>
         <a href="#form">
           <Button

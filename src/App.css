@@ -2,5 +2,6 @@
   border: 1px solid red;
 } */
 html {
+  background: #121212;
   scroll-behavior: smooth;
 }

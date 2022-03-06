@@ -8,8 +8,11 @@ import AllUsers from "./Components/AllUsers";
 import { NotificationsProvider } from "@mantine/notifications";
 import { Route, Routes } from "react-router-dom";
 import Registered from "./Components/Registered";
+import { MantineProvider } from "@mantine/core";
 function App() {
   return (
+    <MantineProvider theme={{colorScheme:'dark'}}>
+
     <Routes>
       
       <Route path="/registered" element={<Registered />} />
@@ -27,7 +30,7 @@ function App() {
                   <Waves />
                 </div>
               </div>
-              <div>
+              <div className="text-[#e1e1e1] bg-[#121212]" >
                 <Form />
               </div>
             </div>
@@ -35,6 +38,8 @@ function App() {
         }
       />
     </Routes>
+    </MantineProvider>
+
   );
 }
 

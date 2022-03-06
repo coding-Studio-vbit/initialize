@@ -123,13 +123,13 @@ export default function Form() {
   return (
     <div
       id="form"
-      className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]  bg-[#f5e8f7] grid z-20"
+      className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]   grid z-20"
     >
       <div className="absolute w-full z-[-1]">
         <WavesDown />
       </div>
       <AboutEvent />
-      <div className="shadow-xl md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-white h-max p-8">
+      <div className="shadow-xl md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
         <span className="text-[2.2rem]">Register</span>
 
         <form
@@ -145,6 +145,7 @@ export default function Form() {
             required
             label="Name"
             variant="filled"
+            
             placeholder="John"
             error={form.errors.name}
             onBlur={() => form.validateField("name")}
