@@ -14,7 +14,7 @@ export default function Registered() {
         <span className="text-[1.5rem] text-[#e1e1e1]" >Registered Successfully</span>
       </div>
       <div className="flex bg-[#1e1e1e] text-[#e1e1e1] shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#82498c] ">
-            <span className="text-[1.1rem]" >We will contact you shortly {state.name}. Stay tuned.</span>
+            <span className="text-[1.1rem]" >We will contact you shortly <strong>{location.state}</strong>. Stay tuned.</span>
             <span className="text-[1.1rem]" >We hope you will enjoy our sessions and have fun.</span>
             <span className="text-[1.25rem] mt-4" >Have any Queries ?</span>
             <span> Reach us on <strong>executives@codingstudio.club</strong></span>
