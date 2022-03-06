@@ -43,7 +43,9 @@ export default function Form() {
     },
     validationRules: {
       email: (value) => validator.isEmail(value),
-      name: (value) => validator.isAlpha(value, ["en-IN"],{ignore:' '}) && value.length >= 3,
+      name: (value) =>
+        validator.isAlpha(value, ["en-IN"], { ignore: " " }) &&
+        value.length >= 3,
       roll: (value) => checkStudentRollNumber(value),
       phone: (value) => validator.isMobilePhone(value, ["en-IN"]),
     },
@@ -85,7 +87,6 @@ export default function Form() {
               title: "Email already registered.",
               autoClose: 5500,
             });
-
           });
         } else if (r3.docs.length > 0) {
           unstable_batchedUpdates(() => {
@@ -117,18 +118,18 @@ export default function Form() {
   };
 
   return (
-    <div
-      className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]   grid z-20"
-    >
+    <div className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]   grid z-20">
       <div className="absolute w-full z-[-1] -translate-y-1">
         <WavesDown />
       </div>
       <AboutEvent />
-      <div   id = 'form' className="shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
+      <div
+        id="form"
+        className="md:min-h-[42rem] shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8"
+      >
         <span className="text-[2.2rem]">Register</span>
 
         <form
-      
           className="mt-6 grid gap-3 relative z-30 "
           onSubmit={async (e) => {
             e.preventDefault();
@@ -141,7 +142,6 @@ export default function Form() {
             required
             label="Name"
             variant="filled"
-            
             placeholder="John"
             error={form.errors.name}
             onBlur={() => form.validateField("name")}
@@ -196,6 +196,10 @@ export default function Form() {
             ]}
             {...form.getInputProps("branch")}
           />
+          <p className="mt-3 text-xs text-red-300">
+          *Registrants will go through a short interview before being selected
+          for the workshop.
+        </p>
           <Button
             type="submit"
             size="md"
@@ -206,7 +210,6 @@ export default function Form() {
         </form>
       </div>
 
-      
       <Modal
         opened={opened}
         centered
@@ -227,7 +230,7 @@ const Questions = ({ form, setOpened }) => {
   const [error, setError] = useState({ q1: "", q2: "" });
   const [q2, setQ2] = useState("");
   const [visible, setVisible] = useState(false);
-  const nav = useNavigate()
+  const nav = useNavigate();
   return (
     <div className="relative">
       <LoadingOverlay visible={visible} />
@@ -286,9 +289,9 @@ const Questions = ({ form, setOpened }) => {
               form.reset();
             });
 
-            nav("/registered",{state:form.values.name})
+            nav("/registered", { state: form.values.name });
           }
-          setVisible(false)
+          setVisible(false);
         }}
         className="bg-purple-600 mt-[1rem] ml-auto w-full  hover:bg-purple-800 shadow-md"
       >
