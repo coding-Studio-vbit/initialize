@@ -8,12 +8,12 @@ export default function Registered() {
     }
 
   return (
-    <div className="bg-[#121212] flex flex-col w-screen h-screen items-center">
+    <div className="bg-[#121212]  flex flex-col w-screen h-screen items-center">
       <div className="flex gap-8 items-center mt-16" >
         <span className="material-icons text-green-600 text-[3rem]">check_circle</span>
         <span className="text-[1.5rem] text-[#e1e1e1]" >Registered Successfully</span>
       </div>
-      <div className="flex bg-[#1e1e1e] text-[#e1e1e1] shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#9333ea] ">
+      <div className="flex bg-[#1e1e1e] px-[2rem] text-[#e1e1e1] shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#9333ea] ">
             <span className="text-[1.1rem]" >We will contact you shortly <strong>{location.state}</strong>. Stay tuned.</span>
             <span className="text-[1.1rem]" >We hope you are as excited as we are.</span>
             <span className="text-[1.25rem] mt-4" >Have any Queries ?</span>
