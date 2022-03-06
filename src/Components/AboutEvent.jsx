@@ -12,38 +12,45 @@ export default function AboutEvent() {
       </span>
       <div className="mt-2">
         <span>
-          Initialize is a 5-weeks event focused on competitive programming, data
-          structures and algorithms. During the course of five weeks, you will
-          be learning various DSA, and Competitive Programming concepts right
-          from the basics and also be participating in exciting contests every
-          week. <br />
+          Initialize is a 5-week long event focused on competitive programming,
+          data structures, and algorithms. Over five weeks, you will be learning
+          DSA and CP concepts right from the basics and also be competing with
+          your peers in weekly contests. The event will conclude in a final show
+          of skill, a Grand Contest, and y'all winners just get bragging rights.
+          Nah, we have something special for ya ;)
+          <br />
           <br />
           The objective of Initialize is to create a culture of consistent
-          competitive programming practice and also encourage peers who want to
-          kick-start their competitive programming journey.
+          competitive programming practice and also to encourage our peers who
+          want to kick-start their competitive programming journey.
           <br />
         </span>
 
         <p className="mt-3">
-          <strong>Event Span</strong> - 17th March, 2022 to 23rd April, 2022
+          <span className="font-bold text-[#9333ea]">Event Span</span> - 17th
+          March, 2022 to 23rd April, 2022
         </p>
         <p className="mt-3">
-          <strong>Event Venue</strong> - coding.Studio(); HQ, Nalanda Block
+          <span className="font-bold text-[#9333ea]">Event Venue</span> -
+          coding.Studio(); HQ, Nalanda Block
         </p>
 
         <p className="mt-3">
           Feel free to reach out to us at:{" "}
-          <strong>
+          <span className="text-[#9333ea">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=executives@codingstudio.club"
               target="_blank"
             >
               executives@codingstudio.club
             </a>
-          </strong>
+          </span>
         </p>
 
-        <Blockquote className="mt-16 absolute bottom-6 left-5" cite="– c.S();">
+        <Blockquote
+          className="mt-16 absolute bottom-6 left-5"
+          cite="– coding.Studio();"
+        >
           Sleep is a scam.
         </Blockquote>
         <span
