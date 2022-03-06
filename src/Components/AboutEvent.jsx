@@ -6,11 +6,8 @@ export default function AboutEvent() {
       <span className="text-[2.2rem]">About cs.Init();</span>
       <div className="mt-2">
         <span>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. This personal finance app's filled text fields have been customized using Material Theming. Areas of customization include color and typography.Voluptatibus,
-          fuga harum ab natus veniam blanditiis laborum eveniet maiores atque
-          vero? Commodi possimus odio dignissimos eveniet vel rerum? Molestias,
-          at eius?
-        </span>
+        Initialize is a 5-weeks event focused on competitive programming, data structures and algorithms. During the course of 5 weeks, you will be learning various DSA, and Competitive Programming concepts right from the basics and also be participating in exciting contests every week. The objective of Initialize is to create a culture of consistent competitive programming practice and also encourage peers who want to kickstart their competitive programming journey. Our goal is to give you a taste of the adrenaline rush we get when we see an :AC:
+       </span>
         <Blockquote className="mt-16 absolute bottom-6 left-5" cite="– cS people">
           Sleep is a SCAM
         </Blockquote>
