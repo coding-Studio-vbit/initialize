@@ -25,7 +25,8 @@ export const checkStudentRollNumber = (roll) => {
    * 2 - Serial Number
    */
   roll = roll.toUpperCase();
-
+if(roll.length!=10)
+return false;
   let year = roll.substring(0, 2).trim();
   let allowedYears = [];
   let currentYear = new Date().getFullYear();
