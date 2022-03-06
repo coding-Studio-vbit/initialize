@@ -6,12 +6,12 @@ export default function Event() {
       <div className="self-center md:justify-self-start justify-self-center w-[70%] h-full 	">
         <img src={Logo} alt="logo" />
       </div>
-      <span className="md:text-[4rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center">
+      <span className="md:text-[4rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center  font-mono">
      
-          Initialize your CP career with cs.init();
+          Boot-up your CP journey with cS.<em><span className="text-[#9333ea]" >initialize</span>();</em>
         
         <span className="mt-4 block text-[1.1rem] md:text-right text-center">
-          Registration ends on 13th March 2022, 11:59 PM
+          Registration closes on 13th March 2022, 11:59 PM
         </span>
       </span>
     </div>
