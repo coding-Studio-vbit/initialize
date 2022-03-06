@@ -118,7 +118,6 @@ export default function Form() {
 
   return (
     <div
-      id="form"
       className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]   grid z-20"
     >
       <div className="absolute w-full z-[-1] -translate-y-1">
@@ -129,6 +128,7 @@ export default function Form() {
         <span className="text-[2.2rem]">Register</span>
 
         <form
+        id = 'form'
           className="mt-6 grid gap-3 relative z-30 "
           onSubmit={async (e) => {
             e.preventDefault();
