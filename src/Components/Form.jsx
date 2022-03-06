@@ -42,7 +42,7 @@ export default function Form() {
     },
     validationRules: {
       email: (value) => validator.isEmail(value),
-      name: (value) => validator.isAlpha(value) && value.length >= 3,
+      name: (value) => validator.isAlpha(value, ["en-IN"],{ignore:' '}) && value.length >= 3,
       roll: (value) => checkStudentRollNumber(value),
       phone: (value) => validator.isMobilePhone(value, ["en-IN"]),
     },
