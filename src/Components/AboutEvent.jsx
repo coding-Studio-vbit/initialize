@@ -30,7 +30,7 @@ export default function AboutEvent() {
         <p className="mt-3">
           <strong>Event Venue</strong> - coding.Studio(); HQ, Nalanda Block
         </p>
-        
+
         <p className="mt-3">
           Feel free to reach out to us at:{" "}
           <strong>
@@ -43,10 +43,7 @@ export default function AboutEvent() {
           </strong>
         </p>
 
-        <Blockquote
-          className="mt-16 absolute bottom-6 left-5"
-          cite="– c.S(); people"
-        >
+        <Blockquote className="mt-16 absolute bottom-6 left-5" cite="– c.S();">
           Sleep is a scam.
         </Blockquote>
         <span
