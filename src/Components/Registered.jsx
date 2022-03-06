@@ -3,9 +3,9 @@ import { Navigate, useLocation } from "react-router-dom";
 import logo from './../blackLogo.png'
 export default function Registered() {
   const location = useLocation();
-    // if(!location.state){
-    //    return <Navigate to={"/"}  replace={true}/>
-    // }
+    if(!location.state){
+       return <Navigate to={"/"}  replace={true}/>
+    }
 
   return (
     <div className="bg-[#121212] flex flex-col w-screen h-screen items-center">
@@ -14,7 +14,7 @@ export default function Registered() {
         <span className="text-[1.5rem] text-[#e1e1e1]" >Registered Successfully</span>
       </div>
       <div className="flex bg-[#1e1e1e] text-[#e1e1e1] shadow-xl p-4 mt-6 flex-col border-t-[0.35rem] border-[#82498c] ">
-            <span className="text-[1.1rem]" >We will contact you shortly {}. Stay tuned.</span>
+            <span className="text-[1.1rem]" >We will contact you shortly {state.name}. Stay tuned.</span>
             <span className="text-[1.1rem]" >We hope you will enjoy our sessions and have fun.</span>
             <span className="text-[1.25rem] mt-4" >Have any Queries ?</span>
             <span> Reach us on <strong>executives@codingstudio.club</strong></span>
