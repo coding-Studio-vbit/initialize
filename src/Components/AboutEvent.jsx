@@ -37,14 +37,14 @@ export default function AboutEvent() {
 
         <p className="mt-3">
           Feel free to reach out to us at:{" "}
-          <span className="text-[#9333ea">
+          <p className="text-[#9333ea]">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=executives@codingstudio.club"
               target="_blank"
             >
               executives@codingstudio.club
             </a>
-          </span>
+          </p>
         </p>
 
         <Blockquote

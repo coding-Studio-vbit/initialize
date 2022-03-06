@@ -196,10 +196,10 @@ export default function Form() {
             ]}
             {...form.getInputProps("branch")}
           />
-          <p className="mt-3 text-xs text-red-300">
+          {/* <p className="mt-3 text-xs text-red-300">
           *Registrants will go through a short interview before being selected
           for the workshop.
-        </p>
+        </p> */}
           <Button
             type="submit"
             size="md"
