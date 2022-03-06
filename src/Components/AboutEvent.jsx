@@ -7,7 +7,11 @@ export default function AboutEvent() {
       <div className="mt-2">
         <span>
         Initialize is a 5-weeks event focused on competitive programming, data structures and algorithms. During the course of five weeks, you will be learning various DSA, and Competitive Programming concepts right from the basics and also be participating in exciting contests every week. The objective of Initialize is to create a culture of consistent competitive programming practice and also encourage peers who want to kick-start their competitive programming journey. Our goal is to give you a taste of the adrenaline rush we get when we solve problems.
+        <br/>
        </span>
+       
+        <p className="mt-3">Feel free to reach out to us at: <strong><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=executives@codingstudio.club" target="_blank">executives@codingstudio.club</a></strong></p>
+       
         <Blockquote className="mt-16 absolute bottom-6 left-5" cite="– c.S(); people">
           Sleep is a scam.
         </Blockquote>
