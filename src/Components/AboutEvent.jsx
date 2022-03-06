@@ -1,4 +1,4 @@
-import { Blockquote } from "@mantine/core";
+import { Blockquote, Highlight } from "@mantine/core";
 import React from "react";
 import logo from "./../blackLogo.png";
 export default function AboutEvent() {
@@ -15,12 +15,12 @@ export default function AboutEvent() {
         <Blockquote className="mt-16 absolute bottom-6 left-5" cite="– cS people">
           Sleep is a SCAM
         </Blockquote>
-        <img
-          className=" w-[20%] absolute bottom-5 right-5 "
-          src={logo}
+        <span
+          className="text-[4rem] absolute bottom-5 right-16 font-bold "
+          // src={logo}
           
-          alt="logo"
-        />
+          // alt="logo"
+        >c <span className="text-[#6b21a8] absolute   font-bold p-0 m-0" >S</span> </span>
 
       </div>
     </div>
