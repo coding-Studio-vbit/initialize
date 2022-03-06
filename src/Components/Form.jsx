@@ -73,30 +73,27 @@ export default function Form() {
           unstable_batchedUpdates(() => {
             console.log("ilduhliu");
             notifications.showNotification({
-              color: "#82498c",
+              color: "#9333ea",
               title: "Roll Number already registered",
               autoClose: 5500,
             });
-            setOpenedSucc(true);
           });
         } else if (r2.docs.length > 0) {
           unstable_batchedUpdates(() => {
             notifications.showNotification({
-              color: "#82498c",
+              color: "#9333ea",
               title: "Email already registered.",
               autoClose: 5500,
             });
 
-            setOpenedSucc(true);
           });
         } else if (r3.docs.length > 0) {
           unstable_batchedUpdates(() => {
             notifications.showNotification({
-              color: "#82498c",
+              color: "#9333ea",
               title: "Mobile number already registered.",
               autoClose: 5500,
             });
-            setOpenedSucc(true);
           });
         } else {
           unstable_batchedUpdates(() => {
@@ -109,11 +106,10 @@ export default function Form() {
       console.log(error);
       unstable_batchedUpdates(() => {
         notifications.showNotification({
-          color: "#82498c",
+          color: "#9333ea",
           title: "An error occured while registering. Try again later.",
           autoClose: 5500,
         });
-        setOpenedSucc(true);
       });
     } finally {
       setVisible(false);
@@ -125,11 +121,11 @@ export default function Form() {
       id="form"
       className="relative md:grid-cols-2 min-h-screen md:gap-8 lg:gap-16  grid-cols-1 place-content-center	 w-full py-[5rem]   grid z-20"
     >
-      <div className="absolute w-full z-[-1]">
+      <div className="absolute w-full z-[-1] -translate-y-1">
         <WavesDown />
       </div>
       <AboutEvent />
-      <div className="shadow-xl md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
+      <div className="shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
         <span className="text-[2.2rem]">Register</span>
 
         <form
@@ -244,8 +240,8 @@ const Questions = ({ form, setOpened }) => {
           if (e.target.value.length >= 50) setError({ q1: "", q2: error.q2 });
           setQ1(e.target.value);
         }}
-        label="Do you have any programming experience?"
         autosize
+        label="What fascinates you about programming ?"
         maxLength={300}
         className="mb-4"
         minRows={3}
@@ -260,7 +256,7 @@ const Questions = ({ form, setOpened }) => {
           setQ2(e.target.value);
         }}
         variant="filled"
-        label="Why do you want to participate in cs.Init(); ?"
+        label="Do you have any programming experience?"
         autosize
         minRows={3}
       />

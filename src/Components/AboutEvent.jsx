@@ -1,9 +1,8 @@
-import { Blockquote, Highlight } from "@mantine/core";
+import { Blockquote } from "@mantine/core";
 import React from "react";
-import logo from "./../blackLogo.png";
 export default function AboutEvent() {
   return (
-    <div className="relative shadow-xl min-h-[20rem] md:w-[95%]  lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto md:ml-auto md:mr-0   bg-[#1e1e1e]  p-8">
+    <div className="relative shadow-xl min-h-[30rem] md:w-[95%]  lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto md:ml-auto md:mr-0   bg-[#1e1e1e]  p-8">
       <span className="text-[2.2rem]">About cs.Init();</span>
       <div className="mt-2">
         <span>
@@ -16,11 +15,11 @@ export default function AboutEvent() {
           Sleep is a SCAM
         </Blockquote>
         <span
-          className="text-[4rem] absolute bottom-5 right-16 font-bold "
+          className="text-[2rem] md:text-[4rem] absolute bottom-5 right-[4rem] md:right-[8rem] font-bold "
           // src={logo}
           
           // alt="logo"
-        >c <span className="text-[#6b21a8] absolute   font-bold p-0 m-0" >S</span> </span>
+        >c. <span className="text-[#6b21a8] absolute   font-bold p-0 m-0" >S();</span> </span>
 
       </div>
     </div>
