@@ -18,8 +18,10 @@ export default function AboutEvent() {
         <img
           className=" w-[20%] absolute bottom-5 right-5 "
           src={logo}
+          
           alt="logo"
         />
+
       </div>
     </div>
   );

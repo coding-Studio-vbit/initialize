@@ -1,6 +1,5 @@
 import {
   Button,
-  Dialog,
   LoadingOverlay,
   Modal,
   Select,
@@ -26,12 +25,14 @@ import WavesDown from "./../wavesdown.svg?component";
 
 import AboutEvent from "./AboutEvent";
 import { unstable_batchedUpdates } from "react-dom";
+import { useNotifications } from "@mantine/notifications";
+import { useNavigate } from "react-router-dom";
 
 export default function Form() {
   const [opened, setOpened] = useState(false);
+  const notifications = useNotifications();
+  const [visible, setVisible] = useState(false);
 
-  const [openedSucc, setOpenedSucc] = useState(false);
-  const [msg, setMsg] = useState("");
   const form = useForm({
     initialValues: {
       email: "",
@@ -57,6 +58,7 @@ export default function Form() {
   const submit = async () => {
     try {
       if (form.validate()) {
+        setVisible(true);
         const coll = collection(db, "users");
         const q1 = query(coll, where("roll", "==", form.values.roll));
         const q2 = query(coll, where("email", "==", form.values.email));
@@ -66,27 +68,38 @@ export default function Form() {
           getDocs(q2),
           getDocs(q3),
         ]);
+        console.log("djhgiu");
         if (r1.docs.length > 0) {
           unstable_batchedUpdates(() => {
-            setMsg("Roll Number already registered.");
-
+            console.log("ilduhliu");
+            notifications.showNotification({
+              color: "#82498c",
+              title: "Roll Number already registered",
+              autoClose: 5500,
+            });
             setOpenedSucc(true);
           });
         } else if (r2.docs.length > 0) {
           unstable_batchedUpdates(() => {
-            setMsg("Email already registered.");
+            notifications.showNotification({
+              color: "#82498c",
+              title: "Email already registered.",
+              autoClose: 5500,
+            });
 
             setOpenedSucc(true);
           });
         } else if (r3.docs.length > 0) {
           unstable_batchedUpdates(() => {
-            setMsg("Mobile number already registered.");
-
+            notifications.showNotification({
+              color: "#82498c",
+              title: "Mobile number already registered.",
+              autoClose: 5500,
+            });
             setOpenedSucc(true);
           });
         } else {
           unstable_batchedUpdates(() => {
-            setMsg("Registered successfully.");
             // form.reset();
             setOpened(true);
           });
@@ -95,9 +108,15 @@ export default function Form() {
     } catch (error) {
       console.log(error);
       unstable_batchedUpdates(() => {
-        setMsg("An error occured while registering. Try again later.");
+        notifications.showNotification({
+          color: "#82498c",
+          title: "An error occured while registering. Try again later.",
+          autoClose: 5500,
+        });
         setOpenedSucc(true);
       });
+    } finally {
+      setVisible(false);
     }
   };
 
@@ -120,6 +139,7 @@ export default function Form() {
             await submit();
           }}
         >
+          <LoadingOverlay visible={visible} />
           <TextInput
             icon={<span className="material-icons">face</span>}
             required
@@ -188,36 +208,15 @@ export default function Form() {
           </Button>
         </form>
       </div>
-      <Dialog
-        opened={openedSucc}
-        withCloseButton
-        position={{ top: 20, right: 20 }}
-        onClose={() => setOpenedSucc(false)}
-        size="lg"
-        radius="md"
-      >
-        <DialogMessage setOpenedSucc={setOpenedSucc} msg={msg} />
-      </Dialog>
-      {/* <Modal
-        opened={openedSucc}
-        centered
-        onClose={() => setOpenedSucc(false)}
-        title="All Done!"
-        
-      >
-        <span className="text-lg" >{msg}</span>
-      </Modal> */}
+
+      
       <Modal
         opened={opened}
         centered
         onClose={() => setOpened(false)}
         title="Almost there !"
       >
-        <Questions
-          form={form}
-          setOpened={setOpened}
-          setOpenedSucc={setOpenedSucc}
-        />
+        <Questions form={form} setOpened={setOpened} />
       </Modal>
       <div className="absolute w-full h-max bottom-0 opacity-[0.60] z-[15]">
         <Art />
@@ -226,20 +225,15 @@ export default function Form() {
   );
 }
 
-const Questions = ({ form, setOpened, setOpenedSucc }) => {
+const Questions = ({ form, setOpened }) => {
   const [q1, setQ1] = useState("");
   const [error, setError] = useState({ q1: "", q2: "" });
   const [q2, setQ2] = useState("");
   const [visible, setVisible] = useState(false);
-
+  const nav = useNavigate()
   return (
     <div className="relative">
-      <LoadingOverlay
-        visible={visible}
-        loaderProps={{ size: "sm", color: "pink", variant: "bars" }}
-        overlayOpacity={0.3}
-        overlayColor="#c5c5c5"
-      />
+      <LoadingOverlay visible={visible} />
       <Textarea
         placeholder="Start here"
         required
@@ -273,6 +267,7 @@ const Questions = ({ form, setOpened, setOpenedSucc }) => {
         type="submit"
         size="md"
         onClick={async () => {
+          setVisible(true);
           if (q1.length < 50) {
             setError({
               q1: "Please enter atleast 50 characters",
@@ -291,10 +286,11 @@ const Questions = ({ form, setOpened, setOpenedSucc }) => {
             });
             unstable_batchedUpdates(() => {
               setOpened(false);
-              setOpenedSucc(true);
               setVisible(false)
               form.reset();
             });
+
+            nav("/registered",{state:form.values.name})
           }
         }}
         className="bg-purple-600 mt-[1rem] ml-auto w-full  hover:bg-purple-800 shadow-md"
@@ -303,13 +299,4 @@ const Questions = ({ form, setOpened, setOpenedSucc }) => {
       </Button>
     </div>
   );
-};
-
-const DialogMessage = ({ setOpenedSucc, msg }) => {
-  useEffect(() => {
-    setTimeout(() => {
-      setOpenedSucc(false);
-    }, 2500);
-  }, []);
-  return <span className="text-lg">{msg}</span>;
 };
