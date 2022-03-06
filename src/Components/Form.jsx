@@ -124,11 +124,11 @@ export default function Form() {
         <WavesDown />
       </div>
       <AboutEvent />
-      <div className="shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
+      <div   id = 'form' className="shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8">
         <span className="text-[2.2rem]">Register</span>
 
         <form
-        id = 'form'
+      
           className="mt-6 grid gap-3 relative z-30 "
           onSubmit={async (e) => {
             e.preventDefault();
