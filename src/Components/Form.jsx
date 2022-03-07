@@ -2,6 +2,7 @@ import {
   Button,
   LoadingOverlay,
   Modal,
+  NumberInput,
   Select,
   Textarea,
   TextInput,
@@ -40,6 +41,8 @@ export default function Form() {
       roll: "",
       phone: "",
       branch: "",
+      year: "",
+      section: "",
     },
     validationRules: {
       email: (value) => validator.isEmail(value),
@@ -48,6 +51,8 @@ export default function Form() {
         value.length >= 3,
       roll: (value) => checkStudentRollNumber(value),
       phone: (value) => validator.isMobilePhone(value, ["en-IN"]),
+      year:(value)=> validator.isNumeric(value),
+      
     },
     errorMessages: {
       email: "Enter a valid email address",
@@ -174,6 +179,40 @@ export default function Form() {
             placeholder="970414xxxx"
             {...form.getInputProps("phone")}
           />
+          <div className="flex gap-4">
+            <Select
+              icon={<span className="material-icons">
+              date_range
+              </span>}
+              placeholder="Enter your year"
+              label="Year"
+              required
+              data={[
+                { value: "1", label: "1" },
+                { value: "2", label: "2" },
+                { value: "3", label: "3" },
+                { value: "4", label: "4" },
+                
+              ]}
+            {...form.getInputProps("year")}
+
+            />
+            <Select
+            icon={<span className="material-icons">class</span>}
+            required
+            label="Section"
+            variant="filled"
+            data={[
+              { value: "A", label: "A" },
+              { value: "B", label: "B" },
+              { value: "C", label: "C" },
+              { value: "D", label: "D" },
+              
+            ]}
+            placeholder="Enter your section"
+            {...form.getInputProps("section")}
+          />
+          </div>
           <Select
             icon={<span className="material-icons">school</span>}
             label="Branch"
