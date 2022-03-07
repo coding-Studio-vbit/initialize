@@ -38,7 +38,6 @@ return false;
     allowedYears.push(String(currentYear - i).slice(-2));
   //Invalid Year
   if (!allowedYears.includes(year)) {
-    console.log("Invalid year");
     return false;
   }
 
@@ -46,7 +45,6 @@ return false;
 
   //Invalid Course Type
   if (!["1", "5"].includes(courseType)) {
-    console.log("Invalid course type");
     return false;
   }
 

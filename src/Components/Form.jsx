@@ -75,10 +75,9 @@ export default function Form() {
           getDocs(q2),
           getDocs(q3),
         ]);
-        console.log("djhgiu");
         if (r1.docs.length > 0) {
           unstable_batchedUpdates(() => {
-            console.log("ilduhliu");
+            // console.log("ilduhliu");
             notifications.showNotification({
               color: "#9333ea",
               title: "Roll Number already registered",
@@ -109,7 +108,6 @@ export default function Form() {
         }
       }
     } catch (error) {
-      console.log(error);
       unstable_batchedUpdates(() => {
         notifications.showNotification({
           color: "#9333ea",

@@ -16,7 +16,7 @@ export default function AllUsers() {
 
   return (
     <div className="p-8" >
-              <span className="text-[1.1rem]" >Total : {users.length}</span>
+              <span className="text-[1.1rem] text-white" >Total : {users.length}</span>
 
         <Table>
           <thead>
