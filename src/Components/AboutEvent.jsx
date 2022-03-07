@@ -15,7 +15,7 @@ export default function AboutEvent() {
         </span>
         <div className="mt-2">
           <span>
-            Initialize is a five-week-long event focused on competitive
+            Initialize is a five-week-long peer learning event that focuses on competitive
             programming, data structures, and algorithms. Over five weeks, you
             will be learning DSA and CP concepts right from the basics and also
             be competing with your peers in weekly contests.
