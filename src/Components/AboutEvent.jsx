@@ -18,7 +18,10 @@ export default function AboutEvent() {
             Initialize is a five-week-long event focused on competitive
             programming, data structures, and algorithms. Over five weeks, you
             will be learning DSA and CP concepts right from the basics and also
-            be competing with your peers in weekly contests. The
+            be competing with your peers in weekly contests.
+            <br />
+            <br />
+            The
             coding.Studio(); team will be personally mentoring the participants
             throughout the the event. Learning sessions will take place right
             here at the c.S(); HQ, accompanied by practice sessions and contests
