@@ -130,7 +130,7 @@ export default function Form() {
       <AboutEvent />
       <div
         id="form"
-        className="md:min-h-[42rem] shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] h-max p-8"
+        className=" shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] p-8"
       >
         <span className="text-[2.2rem]">Register</span>
 
