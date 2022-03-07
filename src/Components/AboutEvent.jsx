@@ -15,13 +15,16 @@ export default function AboutEvent() {
         </span>
         <div className="mt-2">
           <span>
-            Initialize is a five-week long event focused on competitive
+            Initialize is a five-week-long event focused on competitive
             programming, data structures, and algorithms. Over five weeks, you
             will be learning DSA and CP concepts right from the basics and also
-            be competing with your peers in weekly contests. The event will
-            conclude in a final show of skill, a Grand Contest, and y'all
-            winners just get bragging rights. Nah, we have something special for
-            ya ;)
+            be competing with your peers in weekly contests. The
+            coding.Studio(); team will be personally mentoring the participants
+            throughout the the event. Learning sessions will take place right
+            here at the c.S(); HQ, accompanied by practice sessions and contests
+            on Discord. The event will conclude in a final show of skill, a
+            Grand Contest, and y'all winners just get bragging rights. Nah, we
+            have something special for ya ;)
             <br />
             <br />
             The objective of Initialize is to create a culture of consistent
