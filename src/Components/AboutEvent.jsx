@@ -2,7 +2,7 @@ import { Blockquote } from "@mantine/core";
 import React from "react";
 export default function AboutEvent() {
   return (
-    <div className="relative shadow-xl min-h-[55rem] md:min-h-[42rem] md:w-[95%]  lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto md:ml-auto md:mr-0   bg-[#1e1e1e]  p-8">
+    <div className="relative shadow-xl min-h-[925px] md:min-h-[42rem] md:w-[95%]  lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto md:ml-auto md:mr-0   bg-[#1e1e1e]  p-8">
       <span className="text-[2.2rem]">
         About{" "}
         <em>
