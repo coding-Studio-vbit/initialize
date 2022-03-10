@@ -11,7 +11,7 @@ import Registered from "./Components/Registered";
 import { MantineProvider } from "@mantine/core";
 function App() {
   console.log("")
-  console.log('Psst... so you are a hacker eh? Find out what this is and tag us on instagram (' + '%ccoding.studio' + ') ;) %c>++++++++++[>+++++++>+++++++++++>++++++++++>+++++++++++>++++++++++>++++++++++>+++++++++++>++++++++++>++++++++++++>++++++++++<<<<<<<<<<-]>+++.>.>+++++.>++++++.>+++++.>---.>--.>+++++.>++.>+.', 'background: #222; color: #9333ea', 'background: #222; color: #bada55');
+  console.log('Psst... so you are a hacker eh? Find out what this is and tag us on instagram (coding.studio) ;) %c>++++++++++[>+++++++>+++++++++++>++++++++++>+++++++++++>++++++++++>++++++++++>+++++++++++>++++++++++>++++++++++++>++++++++++<<<<<<<<<<-]>+++.>.>+++++.>++++++.>+++++.>---.>--.>+++++.>++.>+.', 'background: #222; color: #bada55');
   return (
     <MantineProvider theme={{ colorScheme: "dark" }}>
       <Routes>
