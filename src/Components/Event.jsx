@@ -23,7 +23,7 @@ export default function Event() {
           }}
         />
         <span className="mt-2 block text-[1.1rem] md:text-right text-center font-sans">
-          Registration closes on 13th March 2022, 11:59 PM
+          Registration closes on 12th March 2022, 11:59 PM
         </span>
       </span>
     </div>
