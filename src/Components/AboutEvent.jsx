@@ -9,7 +9,7 @@ export default function AboutEvent() {
         <span className="text-[2.2rem]">
           About{" "}
           <em>
-            <span className="text-[#9333ea] font-mono">initialize</span>
+            <span className="text-[#9333ea] font-mono">codeCraft</span>
             <span className="font-mono">();</span>
           </em>
         </span>
