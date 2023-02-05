@@ -12,7 +12,6 @@ export default function AllUsers() {
     const querySnapshot = await getDocs(collection(db, "users"));
     querySnapshot.forEach((d) => {
       const user = d.data();
-
       data.current.push({
         rollNumber: user.roll,
         name: user.name,

@@ -38,6 +38,7 @@ export default function Form() {
     initialValues: {
       email: "",
       name: "",
+      college:"",
       roll: "",
       phone: "",
       branch: "",
@@ -67,6 +68,7 @@ export default function Form() {
       if (form.validate()) {
         setVisible(true);
         const coll = collection(db, "users");
+        console.log("in submit")
         const q1 = query(coll, where("roll", "==", form.values.roll));
         const q2 = query(coll, where("email", "==", form.values.email));
         const q3 = query(coll, where("phone", "==", form.values.phone));
@@ -77,7 +79,6 @@ export default function Form() {
         ]);
         if (r1.docs.length > 0) {
           unstable_batchedUpdates(() => {
-            // console.log("ilduhliu");
             notifications.showNotification({
               color: "#9333ea",
               title: "Roll Number already registered",
@@ -108,6 +109,7 @@ export default function Form() {
         }
       }
     } catch (error) {
+      console.log(error)
       unstable_batchedUpdates(() => {
         notifications.showNotification({
           color: "#9333ea",
@@ -176,6 +178,14 @@ export default function Form() {
             variant="filled"
             placeholder="970414xxxx"
             {...form.getInputProps("phone")}
+          />
+          <TextInput
+          icon ={<span className="material-icons">apartment</span>}
+          required
+          label="College"
+          variant="filled"
+          placeholder="Harvard University"
+          {...form.getInputProps("college")}
           />
           <div className="flex gap-4">
             <Select
