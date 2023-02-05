@@ -16,14 +16,14 @@ export default function Event() {
         <TypewriterComponent
           options={{
             strings: [
-              '<em><span style="color:#9333ea;">initialize</span>();</>',
+              '<em><span style="color:#9333ea;">codeCraft </span>4.0</>',
             ],
             autoStart: true,
             loop: true,
           }}
         />
         <span className="mt-2 block text-[1.1rem] md:text-right text-center font-sans">
-          Registration closes on 12th March 2022, 11:59 PM
+          Registration closes on 15th February 2023, 11:59 PM
         </span>
       </span>
     </div>
