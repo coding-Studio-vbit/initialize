@@ -6,12 +6,14 @@ import { getFirestore } from "firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_TEST_VAR,
-  authDomain: "initialize-3dbb7.firebaseapp.com",
-  projectId: "initialize-3dbb7",
-  storageBucket: "initialize-3dbb7.appspot.com",
-  messagingSenderId: "40755346628",
-  appId: "1:40755346628:web:af7e2d2b492ba694549d91"
+  apiKey: "AIzaSyDp5ggs2qhtdHnnrYKr5oBBXP7M9_5BWiQ",
+  authDomain: "codecraft-850bd.firebaseapp.com",
+  databaseURL: "https://codecraft-850bd-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "codecraft-850bd",
+  storageBucket: "codecraft-850bd.appspot.com",
+  messagingSenderId: "782237452734",
+  appId: "1:782237452734:web:8d183e1a631c64b32211ef",
+  measurementId: "G-D0YDYH2T2F"
 };
 
 // Initialize Firebase
