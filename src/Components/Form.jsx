@@ -208,8 +208,6 @@ export default function Form() {
             label="Hackerrank ID - Enter the ID you will use in the contest"
             variant="filled"
             placeholder="alan_turing"
-            error={form.errors.name}
-            onBlur={() => form.validateField("hackerrankID")}
             {...form.getInputProps("hackerrankID")}
           />
           <div className="flex gap-4">
