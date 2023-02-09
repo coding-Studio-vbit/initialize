@@ -209,8 +209,8 @@ export default function Form() {
             variant="filled"
             placeholder="alan_turing"
             error={form.errors.name}
-            onBlur={() => form.validateField("name")}
-            {...form.getInputProps("name")}
+            onBlur={() => form.validateField("hackerrankID")}
+            {...form.getInputProps("hackerrankID")}
           />
           <div className="flex gap-4">
             <Select
