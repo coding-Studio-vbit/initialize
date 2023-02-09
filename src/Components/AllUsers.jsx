@@ -16,6 +16,7 @@ export default function AllUsers() {
         rollNumber: user.roll,
         name: user.name,
         email: user.email,
+        college: user.college,
         phone: user.phone,
         year: user.year,
         department: user.branch,
@@ -46,6 +47,7 @@ export default function AllUsers() {
           <tr>
             <th>Roll Number</th>
             <th>Name</th>
+            <th>College</th>
             <th>Email / Mobile </th>
             <th>Department</th>
             <th>What fascinates u about programming ?</th>
@@ -61,6 +63,7 @@ export default function AllUsers() {
                   <Checkbox label={user.roll} />
                 </td>
                 <td>{user.name}</td>
+                <td>{user.college}</td>
                 <td>
                   {user.email} --- {user.phone}
                 </td>
