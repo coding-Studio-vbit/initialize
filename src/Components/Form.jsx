@@ -33,12 +33,13 @@ export default function Form() {
   const [opened, setOpened] = useState(false);
   const notifications = useNotifications();
   const [visible, setVisible] = useState(false);
+  const [teamSize, setTeamSize] = useState(1);
 
   const form = useForm({
     initialValues: {
       email: "",
       name: "",
-      college:"",
+      college: "",
       roll: "",
       phone: "",
       branch: "",
@@ -52,8 +53,7 @@ export default function Form() {
         value.length >= 3,
       roll: (value) => checkStudentRollNumber(value),
       phone: (value) => validator.isMobilePhone(value, ["en-IN"]),
-      year:(value)=> validator.isNumeric(value),
-      
+      year: (value) => validator.isNumeric(value),
     },
     errorMessages: {
       email: "Enter a valid email address",
@@ -68,7 +68,7 @@ export default function Form() {
       if (form.validate()) {
         setVisible(true);
         const coll = collection(db, "users");
-        console.log("in submit")
+        console.log("in submit");
         const q1 = query(coll, where("roll", "==", form.values.roll));
         const q2 = query(coll, where("email", "==", form.values.email));
         const q3 = query(coll, where("phone", "==", form.values.phone));
@@ -109,7 +109,7 @@ export default function Form() {
         }
       }
     } catch (error) {
-      console.log(error)
+      console.log(error);
       unstable_batchedUpdates(() => {
         notifications.showNotification({
           color: "#9333ea",
@@ -133,6 +133,10 @@ export default function Form() {
         className=" shadow-xl md:mt-0 mt-8 md:w-[95%] lg:w-[90%] xl:w-[65%]  w-[90%] mx-auto  md:ml-0 md:mr-auto bg-[#1e1e1e] p-8"
       >
         <span className="text-[2.2rem]">Register</span>
+        <br />
+        <span className="text-[0.8rem]">
+          Only 1 member from a team should register.
+        </span>
 
         <form
           className="mt-6 grid gap-3 relative z-30 "
@@ -151,6 +155,25 @@ export default function Form() {
             error={form.errors.name}
             onBlur={() => form.validateField("name")}
             {...form.getInputProps("name")}
+          />
+          <TextInput
+            icon={<span className="material-icons">apartment</span>}
+            required
+            label="College"
+            variant="filled"
+            placeholder="Harvard University"
+            {...form.getInputProps("college")}
+          />
+          <Select
+            icon={<span className="material-icons">face</span>}
+            placeholder="Team Size"
+            label="Team Size"
+            required
+            data={[
+              { value: "1", label: "1" },
+              { value: "2", label: "2" },
+            ]}
+            {...form.getInputProps("teamSize")}
           />
           <TextInput
             icon={<span className="material-icons">numbers</span>}
@@ -179,19 +202,19 @@ export default function Form() {
             placeholder="970414xxxx"
             {...form.getInputProps("phone")}
           />
-          <TextInput
-          icon ={<span className="material-icons">apartment</span>}
-          required
-          label="College"
-          variant="filled"
-          placeholder="Harvard University"
-          {...form.getInputProps("college")}
+            <TextInput
+            icon={<span className="material-icons">face</span>}
+            required
+            label="Hackerrank ID - Enter the ID you will use in the contest"
+            variant="filled"
+            placeholder="alan_turing"
+            error={form.errors.name}
+            onBlur={() => form.validateField("name")}
+            {...form.getInputProps("name")}
           />
           <div className="flex gap-4">
             <Select
-              icon={<span className="material-icons">
-              date_range
-              </span>}
+              icon={<span className="material-icons">date_range</span>}
               placeholder="Enter your year"
               label="Year"
               required
@@ -200,26 +223,23 @@ export default function Form() {
                 { value: "2", label: "2" },
                 { value: "3", label: "3" },
                 { value: "4", label: "4" },
-                
               ]}
-            {...form.getInputProps("year")}
-
+              {...form.getInputProps("year")}
             />
             <Select
-            icon={<span className="material-icons">class</span>}
-            required
-            label="Section"
-            variant="filled"
-            data={[
-              { value: "A", label: "A" },
-              { value: "B", label: "B" },
-              { value: "C", label: "C" },
-              { value: "D", label: "D" },
-              
-            ]}
-            placeholder="Enter your section"
-            {...form.getInputProps("section")}
-          />
+              icon={<span className="material-icons">class</span>}
+              required
+              label="Section"
+              variant="filled"
+              data={[
+                { value: "A", label: "A" },
+                { value: "B", label: "B" },
+                { value: "C", label: "C" },
+                { value: "D", label: "D" },
+              ]}
+              placeholder="Enter your section"
+              {...form.getInputProps("section")}
+            />
           </div>
           <Select
             icon={<span className="material-icons">school</span>}

@@ -10,40 +10,45 @@ export default function AboutEvent() {
           About{" "}
           <em>
             <span className="text-[#9333ea] font-mono">codeCraft</span>
-            <span className="font-mono">();</span>
+            {/* <span className="font-mono">();</span> */}
           </em>
         </span>
         <div className="mt-2">
           <span>
-            Initialize is a five-week-long peer learning event that focuses on competitive
-            programming, data structures, and algorithms. Over five weeks, you
-            will be learning DSA and CP concepts right from the basics and also
-            be competing with your peers in weekly contests.
+            coding.Studio(); is here to present you with an opportunity to help
+            you learn and compete with the programmers out there!
             <br />
             <br />
-            The
-            coding.Studio(); team will be personally mentoring the participants
-            throughout the the event. Learning sessions will take place right
-            here at the c.S(); HQ, accompanied by practice sessions and contests
-            on Discord. The event will conclude in a final show of skill, a
-            Grand Contest, and y'all winners just get bragging rights. Nah, we
-            have something special for ya ;)
+            <span className="font-bold text-[#9333ea]">codeCraft 4.0</span> is finally here!
             <br />
+            With challenges designed to test your problem-solving and
+            algorithmic skills, this is the ideal opportunity for you to
+            showcase your talents and enthusiasm for competitive programming.
+            Even as a beginner or a 3-star programmer, you will have something
+            to ponder and solve!
             <br />
-            The objective of Initialize is to create a culture of consistent
-            competitive programming practice and also to encourage our peers who
-            want to kick-start their competitive programming journey.
+            <br/>
+            This fun-filled, competitive, and educative two-day event, commences with a mock contest followed by an exhilarating grand contest. Register yourselves and participate to win exciting goodies!
             <br />
           </span>
 
           <p className="mt-3">
-            <span className="font-bold text-[#9333ea]">Event Span</span> - 17th
-            March, 2022 to 23rd April, 2022
+            <span className="font-bold text-[#9333ea]">Event Span</span> - 22nd and 23rd February 2023
+            <br/>
+            Day 1: Introduction to Competitive programming followed by Mock contest<br/>
+Day 2: Main contest - codeCraft 4.0
+          </p>
+
+          <p className="mt-3">
+            <span className="font-bold text-[#9333ea]">Team Size</span> - 1 to 2 members per team.
+          </p>
+          <p className="mt-3">
+            <span className="font-bold text-[#9333ea]">Registration Fee </span> - Your love for Problem Solving :)
           </p>
 
           <p className="mt-3">
             <span className="font-bold text-[#9333ea]">Event Venue</span> -
-            coding.Studio(); HQ, Nalanda Block
+            Vignana Bharathi Institute of Technology, Ghatkesar
           </p>
           <p className="overflow-wrap mt-3">
             Feel free to reach out to us at{" "}
