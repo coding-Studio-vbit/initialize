@@ -41,6 +41,8 @@ export default function Form() {
       name: "",
       college: "",
       roll: "",
+      name2:"",
+      roll2:"",
       phone: "",
       branch: "",
       year: "",
@@ -146,16 +148,7 @@ export default function Form() {
           }}
         >
           <LoadingOverlay visible={visible} />
-          <TextInput
-            icon={<span className="material-icons">face</span>}
-            required
-            label="Name"
-            variant="filled"
-            placeholder="John"
-            error={form.errors.name}
-            onBlur={() => form.validateField("name")}
-            {...form.getInputProps("name")}
-          />
+
           <TextInput
             icon={<span className="material-icons">apartment</span>}
             required
@@ -174,6 +167,18 @@ export default function Form() {
               { value: "2", label: "2" },
             ]}
             {...form.getInputProps("teamSize")}
+            onChange={async (e)=>setTeamSize(e)}
+          />
+          {console.log(teamSize)}
+          <TextInput
+            icon={<span className="material-icons">face</span>}
+            required
+            label="Name"
+            variant="filled"
+            placeholder="John"
+            error={form.errors.name}
+            onBlur={() => form.validateField("name")}
+            {...form.getInputProps("name")}
           />
           <TextInput
             icon={<span className="material-icons">numbers</span>}
@@ -184,6 +189,30 @@ export default function Form() {
             placeholder="18P61A0***"
             {...form.getInputProps("roll")}
           />
+          {teamSize==2?(
+            <>
+            <TextInput
+            icon={<span className="material-icons">face</span>}
+            required
+            label="Name - Team Member 2"
+            variant="filled"
+            placeholder="John"
+            error={form.errors.name}
+            onBlur={() => form.validateField("name2")}
+            {...form.getInputProps("name2")}
+          />
+               <TextInput
+            icon={<span className="material-icons">numbers</span>}
+            required
+            onBlur={() => form.validateField("roll2")}
+            label="Roll Number - Team Member 2"
+            variant="filled"
+            placeholder="18P61A0***"
+            {...form.getInputProps("roll2")}
+          />
+            </>
+          ):
+          <></>}
           <TextInput
             icon={<span className="material-icons">alternate_email</span>}
             required
@@ -210,7 +239,7 @@ export default function Form() {
             placeholder="alan_turing"
             {...form.getInputProps("hackerrankID")}
           />
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             <Select
               icon={<span className="material-icons">date_range</span>}
               placeholder="Enter your year"
@@ -238,8 +267,8 @@ export default function Form() {
               placeholder="Enter your section"
               {...form.getInputProps("section")}
             />
-          </div>
-          <Select
+          </div> */}
+          {/* <Select
             icon={<span className="material-icons">school</span>}
             label="Branch"
             placeholder="CSE"
@@ -260,7 +289,7 @@ export default function Form() {
               { value: "me", label: "ME" },
             ]}
             {...form.getInputProps("branch")}
-          />
+          /> */}
           {/* <p className="mt-3 text-xs text-red-300">
           *Registrants will go through a short interview before being selected
           for the workshop.
