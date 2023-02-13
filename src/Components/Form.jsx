@@ -189,6 +189,57 @@ export default function Form() {
             placeholder="18P61A0***"
             {...form.getInputProps("roll")}
           />
+          <div className="flex gap-4">
+            <Select
+              icon={<span className="material-icons">date_range</span>}
+              placeholder="Enter your year"
+              label="Year"
+              required
+              data={[
+                { value: "1", label: "1" },
+                { value: "2", label: "2" },
+                { value: "3", label: "3" },
+                { value: "4", label: "4" },
+              ]}
+              {...form.getInputProps("year")}
+            />
+            <Select
+              icon={<span className="material-icons">class</span>}
+              required
+              label="Section"
+              variant="filled"
+              data={[
+                { value: "A", label: "A" },
+                { value: "B", label: "B" },
+                { value: "C", label: "C" },
+                { value: "D", label: "D" },
+              ]}
+              placeholder="Enter your section"
+              {...form.getInputProps("section")}
+            />
+          </div> 
+          <Select
+            icon={<span className="material-icons">school</span>}
+            label="Branch"
+            placeholder="CSE"
+            searchable
+            required
+            variant="filled"
+            nothingFound="No options"
+            data={[
+              { value: "ce", label: "CE" },
+              { value: "csb", label: "CSB" },
+              { value: "csc", label: "CSC" },
+              { value: "csd", label: "CSD" },
+              { value: "cse", label: "CSE" },
+              { value: "csm", label: "CSM" },
+              { value: "ece", label: "ECE" },
+              { value: "eee", label: "EEE" },
+              { value: "it", label: "IT" },
+              { value: "me", label: "ME" },
+            ]}
+            {...form.getInputProps("branch")}
+          />
           {teamSize==2?(
             <>
             <TextInput
@@ -209,6 +260,57 @@ export default function Form() {
             variant="filled"
             placeholder="18P61A0***"
             {...form.getInputProps("roll2")}
+          />
+           <div className="flex gap-4">
+            <Select
+              icon={<span className="material-icons">date_range</span>}
+              placeholder="Enter your year"
+              label="Year"
+              required
+              data={[
+                { value: "1", label: "1" },
+                { value: "2", label: "2" },
+                { value: "3", label: "3" },
+                { value: "4", label: "4" },
+              ]}
+              {...form.getInputProps("year")}
+            />
+            <Select
+              icon={<span className="material-icons">class</span>}
+              required
+              label="Section"
+              variant="filled"
+              data={[
+                { value: "A", label: "A" },
+                { value: "B", label: "B" },
+                { value: "C", label: "C" },
+                { value: "D", label: "D" },
+              ]}
+              placeholder="Enter your section"
+              {...form.getInputProps("section")}
+            />
+          </div> 
+          <Select
+            icon={<span className="material-icons">school</span>}
+            label="Branch"
+            placeholder="CSE"
+            searchable
+            required
+            variant="filled"
+            nothingFound="No options"
+            data={[
+              { value: "ce", label: "CE" },
+              { value: "csb", label: "CSB" },
+              { value: "csc", label: "CSC" },
+              { value: "csd", label: "CSD" },
+              { value: "cse", label: "CSE" },
+              { value: "csm", label: "CSM" },
+              { value: "ece", label: "ECE" },
+              { value: "eee", label: "EEE" },
+              { value: "it", label: "IT" },
+              { value: "me", label: "ME" },
+            ]}
+            {...form.getInputProps("branch")}
           />
             </>
           ):
@@ -239,58 +341,8 @@ export default function Form() {
             placeholder="alan_turing"
             {...form.getInputProps("hackerrankID")}
           />
-          {/* <div className="flex gap-4">
-            <Select
-              icon={<span className="material-icons">date_range</span>}
-              placeholder="Enter your year"
-              label="Year"
-              required
-              data={[
-                { value: "1", label: "1" },
-                { value: "2", label: "2" },
-                { value: "3", label: "3" },
-                { value: "4", label: "4" },
-              ]}
-              {...form.getInputProps("year")}
-            />
-            <Select
-              icon={<span className="material-icons">class</span>}
-              required
-              label="Section"
-              variant="filled"
-              data={[
-                { value: "A", label: "A" },
-                { value: "B", label: "B" },
-                { value: "C", label: "C" },
-                { value: "D", label: "D" },
-              ]}
-              placeholder="Enter your section"
-              {...form.getInputProps("section")}
-            />
-          </div> */}
-          {/* <Select
-            icon={<span className="material-icons">school</span>}
-            label="Branch"
-            placeholder="CSE"
-            searchable
-            required
-            variant="filled"
-            nothingFound="No options"
-            data={[
-              { value: "ce", label: "CE" },
-              { value: "csb", label: "CSB" },
-              { value: "csc", label: "CSC" },
-              { value: "csd", label: "CSD" },
-              { value: "cse", label: "CSE" },
-              { value: "csm", label: "CSM" },
-              { value: "ece", label: "ECE" },
-              { value: "eee", label: "EEE" },
-              { value: "it", label: "IT" },
-              { value: "me", label: "ME" },
-            ]}
-            {...form.getInputProps("branch")}
-          /> */}
-          {/* <p className="mt-3 text-xs text-red-300">
+          
+           {/* <p className="mt-3 text-xs text-red-300">
           *Registrants will go through a short interview before being selected
           for the workshop.
         </p> */}
