@@ -49,6 +49,7 @@ export default function AllUsers() {
             <th>Name</th>
             <th>College</th>
             <th>Email / Mobile </th>
+            <th>member 2</th>
             <th>Department</th>
             <th>What fascinates u about programming ?</th>
             <th>Any programming experience?</th>
@@ -67,6 +68,7 @@ export default function AllUsers() {
                 <td>
                   {user.email} --- {user.phone}
                 </td>
+                {user.name2?<><td>{user.name2}-{user.roll2}</td></>:<>none</>}
 
                 <td>
                   {user.branch}, {user.section}, {user.year} year
