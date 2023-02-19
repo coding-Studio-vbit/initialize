@@ -273,7 +273,7 @@ export default function Form() {
                 { value: "3", label: "3" },
                 { value: "4", label: "4" },
               ]}
-              {...form.getInputProps("year")}
+              {...form.getInputProps("year2")}
             />
             <Select
               icon={<span className="material-icons">class</span>}
@@ -287,7 +287,7 @@ export default function Form() {
                 { value: "D", label: "D" },
               ]}
               placeholder="Enter your section"
-              {...form.getInputProps("section")}
+              {...form.getInputProps("section2")}
             />
           </div> 
           <Select
@@ -310,7 +310,7 @@ export default function Form() {
               { value: "it", label: "IT" },
               { value: "me", label: "ME" },
             ]}
-            {...form.getInputProps("branch")}
+            {...form.getInputProps("branch2")}
           />
             </>
           ):
