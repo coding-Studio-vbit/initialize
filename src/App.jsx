@@ -12,7 +12,7 @@ import { MantineProvider } from "@mantine/core";
 import Done from "./Components/Done";
 function App() {
   const date = new Date()
-  if(date.getDate() >=18 && date.getFullYear() >= 2023 && date.getMonth() >= 2){
+  if(date.getDate() >=20 && date.getFullYear() >= 2023 ){
 
     return <MantineProvider theme={{colorScheme:'dark'}} >
       <Routes>
