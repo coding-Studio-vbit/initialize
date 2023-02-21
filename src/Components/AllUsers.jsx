@@ -15,12 +15,18 @@ export default function AllUsers() {
       data.current.push({
         rollNumber: user.roll,
         name: user.name,
-        email: user.email,
-        college: user.college,
-        phone: user.phone,
         year: user.year,
         department: user.branch,
         section: user.section,
+        rollNumber2: user.roll2,
+        name2: user.name2,
+        year2: user.year2,
+        department2: user.branch2,
+        section2: user.section2,
+        email: user.email,
+        college: user.college,
+        phone: user.phone,
+        
       });
     });
     setUsers(querySnapshot.docs);
@@ -47,10 +53,15 @@ export default function AllUsers() {
           <tr>
             <th>Roll Number</th>
             <th>Name</th>
+            <th>Year</th>
+            <th>Branch & Section</th>
+            <th>Roll Number(Member 2)</th>
+            <th>Name(Member 2)</th>
+            <th>Year(Member 2)</th>
+            <th>Branch & Section(Member 2)</th>
             <th>College</th>
-            <th>Email / Mobile </th>
-            <th>member 2</th>
-            <th>Department</th>
+            <th>Email</th>
+            <th>Mobile </th>
             <th>What fascinates u about programming ?</th>
             <th>Any programming experience?</th>
           </tr>
@@ -64,15 +75,19 @@ export default function AllUsers() {
                   <Checkbox label={user.roll} />
                 </td>
                 <td>{user.name}</td>
-                <td>{user.college}</td>
+                <td>{user.year}</td>
+                <td>{user.branch}-{user.section}</td>
                 <td>
-                  {user.email} --- {user.phone}
+                  <Checkbox label={user.roll2} />
                 </td>
+                <td>{user.name2}</td>
+                <td>{user.year2}</td>
+                <td>{user.branch2}-{user.section2}</td>
+                <td>{user.college}</td>
+                <td>{user.email}</td>
+                <td>{user.phone}</td>
                 {user.name2?<><td>{user.name2}-{user.roll2}</td></>:<>none</>}
 
-                <td>
-                  {user.branch}, {user.section}, {user.year} year
-                </td>
                 <td>
                   <p>{user.q1}</p>
                 </td>

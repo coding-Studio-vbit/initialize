@@ -15,8 +15,7 @@ export default function AboutEvent() {
         </span>
         <div className="mt-2">
           <span>
-            coding.Studio(); is here to present you with an opportunity to help
-            you learn and compete with the programmers out there!
+            coding.Studio(); is here to present you with an opportunity to learn and compete with the programmers out there!
             <br />
             <br />
             <span className="font-bold text-[#9333ea]">codeCraft 4.0</span> is finally here!
