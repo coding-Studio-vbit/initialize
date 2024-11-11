@@ -41,8 +41,8 @@ export default function Form() {
       name: "",
       college: "",
       roll: "",
-      name2:"",
-      roll2:"",
+    //   name2:"",
+    //   roll2:"",
       phone: "",
       branch: "",
       year: "",
@@ -136,9 +136,9 @@ export default function Form() {
       >
         <span className="text-[2.2rem]">Register</span>
         <br />
-        <span className="text-[0.8rem]">
+        {/* <span className="text-[0.8rem]">
           Only 1 member from a team should register.
-        </span>
+        </span> */}
 
         <form
           className="mt-6 grid gap-3 relative z-30 "
@@ -149,7 +149,7 @@ export default function Form() {
         >
           <LoadingOverlay visible={visible} />
 
-          <TextInput
+          {/* <TextInput
             icon={<span className="material-icons">apartment</span>}
             required
             label="College"
@@ -169,7 +169,7 @@ export default function Form() {
             {...form.getInputProps("teamSize")}
             onChange={async (e)=>setTeamSize(e)}
           />
-          {console.log(teamSize)}
+          {console.log(teamSize)} */}
           <TextInput
             icon={<span className="material-icons">face</span>}
             required
@@ -186,7 +186,7 @@ export default function Form() {
             onBlur={() => form.validateField("roll")}
             label="Roll Number"
             variant="filled"
-            placeholder="18P61A0***"
+            placeholder="21P61A0***"
             {...form.getInputProps("roll")}
           />
           <div className="flex gap-4">
@@ -196,7 +196,7 @@ export default function Form() {
               label="Year"
               required
               data={[
-                { value: "1", label: "1" },
+                // { value: "1", label: "1" },
                 { value: "2", label: "2" },
                 { value: "3", label: "3" },
                 { value: "4", label: "4" },
@@ -258,7 +258,7 @@ export default function Form() {
             onBlur={() => form.validateField("roll2")}
             label="Roll Number - Team Member 2"
             variant="filled"
-            placeholder="18P61A0***"
+            placeholder="21P61A0***"
             {...form.getInputProps("roll2")}
           />
            <div className="flex gap-4">
@@ -333,14 +333,14 @@ export default function Form() {
             placeholder="970414xxxx"
             {...form.getInputProps("phone")}
           />
-            <TextInput
+            {/* <TextInput
             icon={<span className="material-icons">face</span>}
             required
             label="Hackerrank ID - Enter the ID you will use in the contest"
             variant="filled"
             placeholder="alan_turing"
             {...form.getInputProps("hackerrankID")}
-          />
+          /> */}
           
            {/* <p className="mt-3 text-xs text-red-300">
           *Registrants will go through a short interview before being selected
@@ -390,7 +390,7 @@ const Questions = ({ form, setOpened }) => {
           setQ1(e.target.value);
         }}
         autosize
-        label="What fascinates you about programming ?"
+        label="What are your expectations from the sessions?"
         maxLength={300}
         className="mb-4"
         minRows={3}
@@ -425,7 +425,7 @@ const Questions = ({ form, setOpened }) => {
               q1: error.q2,
             });
           } else {
-            await setDoc(doc(db, "users", form.values.roll), {
+            await setDoc(doc(db, "cS-Saturdays", form.values.roll), {
               q1: q1,
               q2: q2,
               ...form.values,
