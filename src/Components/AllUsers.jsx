@@ -9,14 +9,14 @@ export default function AllUsers() {
   const [users, setUsers] = useState([]);
   const data = useRef([]);
   const getAllUsers = async () => {
-    const querySnapshot = await getDocs(collection(db, "users"));
+    const querySnapshot = await getDocs(collection(db, "cS-Saturdays"));
     querySnapshot.forEach((d) => {
       const user = d.data();
       data.current.push({
         rollNumber: user.roll,
         name: user.name,
         email: user.email,
-        college: user.college,
+        // college: user.college,
         phone: user.phone,
         year: user.year,
         department: user.branch,
@@ -47,9 +47,9 @@ export default function AllUsers() {
           <tr>
             <th>Roll Number</th>
             <th>Name</th>
-            <th>College</th>
+            {/* <th>College</th> */}
             <th>Email / Mobile </th>
-            <th>member 2</th>
+            {/* <th>member 2</th> */}
             <th>Department</th>
             <th>What fascinates u about programming ?</th>
             <th>Any programming experience?</th>
@@ -64,11 +64,11 @@ export default function AllUsers() {
                   <Checkbox label={user.roll} />
                 </td>
                 <td>{user.name}</td>
-                <td>{user.college}</td>
+                {/* <td>{user.college}</td> */}
                 <td>
                   {user.email} --- {user.phone}
                 </td>
-                {user.name2?<><td>{user.name2}-{user.roll2}</td></>:<>none</>}
+                {/* {user.name2?<><td>{user.name2}-{user.roll2}</td></>:<>none</>} */}
 
                 <td>
                   {user.branch}, {user.section}, {user.year} year
