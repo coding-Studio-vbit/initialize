@@ -28,8 +28,8 @@ export const checkStudentRollNumber = (roll) => {
 if(roll.length!=10)
 return false;
 //p6 is VBIT college code.
-// if(roll.substring(2,4)!=='P6')
-// return false;
+if(roll.substring(2,4)!=='P6')
+return false;
 if(isNaN(roll[9]))
 return false;
   let year = roll.substring(0, 2).trim();
