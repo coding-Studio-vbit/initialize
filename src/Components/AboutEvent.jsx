@@ -9,41 +9,44 @@ export default function AboutEvent() {
         <span className="text-[2.2rem]">
           About{" "}
           <em>
-            <span className="text-[#9333ea] font-mono">codeCraft</span>
+            <span className="text-[#9333ea] font-mono">cS(); Saturdays</span>
             {/* <span className="font-mono">();</span> */}
           </em>
         </span>
         <div className="mt-2">
           <span>
-            coding.Studio(); is here to present you with an opportunity to help
-            you learn and compete with the programmers out there!
+            coding.Studio() is here to provide you with an opportunity to enhance your problem-solving skills
+             and strengthen your logical building abilities, enabling you to compete with top programmers.
             <br />
             <br />
-            <span className="font-bold text-[#9333ea]">codeCraft 4.0</span> is finally here!
+            <span className="font-bold text-[#9333ea]">cS(); Saturdays</span> is finally here!
             <br />
-            With challenges designed to test your problem-solving and
-            algorithmic skills, this is the ideal opportunity for you to
-            showcase your talents and enthusiasm for competitive programming.
-            Even as a beginner or a 3-star programmer, you will have something
-            to ponder and solve!
-            <br />
-            <br/>
-            This fun-filled, competitive, and educative two-day event, commences with a mock contest followed by an exhilarating grand contest. Register yourselves and participate to win exciting goodies!
+            With sessions designed to sharpen your problem-solving and logical building skills, this is
+             the perfect opportunity for you to engage in hands-on practice every Saturday.
+            Whether you're just starting out or already have some experience, it will
+             help you grow and refine your abilities in competitive programming.
             <br />
           </span>
-
           <p className="mt-3">
-            <span className="font-bold text-[#9333ea]">Event Span</span> - 22nd and 23rd February 2023
+            <span className="font-bold text-[#9333ea]">Event Mode</span> - Online
             <br/>
-            Day 1: Introduction to Competitive programming followed by Mock contest<br/>
-Day 2: Main contest - codeCraft 4.0
           </p>
 
           <p className="mt-3">
-            <span className="font-bold text-[#9333ea]">Team Size</span> - 1 to 2 members per team.
+            <span className="font-bold text-[#9333ea]">Event Span</span> - 16th November to 07th December Every Saturday
+            <br/>
           </p>
+
           <p className="mt-3">
-            <span className="font-bold text-[#9333ea]">Registration Fee </span> - Your love for Problem Solving :)
+            <span className="font-bold text-[#9333ea]">Timing</span> - 7:00 PM to 8:30 PM
+            <br/>
+          </p>
+
+          {/* <p className="mt-3">
+            <span className="font-bold text-[#9333ea]">Team Size</span> - 1 to 2 members per team.
+          </p> */}
+          <p className="mt-3">
+            <span className="font-bold text-[#9333ea]">Registration Fee </span> - Your interest in Learning :)
           </p>
 
           <p className="mt-3">
