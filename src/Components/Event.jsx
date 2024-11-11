@@ -9,21 +9,21 @@ export default function Event() {
         <img src={Logo} alt="logo" />
       </div>
       <span className="md:text-[3.5rem] text-[2rem] text-[#e1e1e1] md:text-right text-center self-center  font-mono">
-        Boot-up your CP journey with{" "}
+        Ignite your logical building progress with{""}
         {/* <em>
           <span className="text-[#9333ea]">initialize</span>();
         </em> */}
         <TypewriterComponent
           options={{
             strings: [
-              '<em><span style="color:#9333ea;">codeCraft </span>4.0</>',
+              '<em><span style="color:#9333ea;">cS(); Saturdays</span></>',
             ],
             autoStart: true,
             loop: true,
           }}
         />
         <span className="mt-2 block text-[1.1rem] md:text-right text-center font-sans">
-          Registration closes on 20th February 2023, 11:59 PM
+          Registration closes on 15th November 2024, 11:59 PM
         </span>
       </span>
     </div>
